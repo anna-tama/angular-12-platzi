@@ -1,6 +1,20 @@
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle Button</button>
+<p>Edad {{person.age}}</p>
+<button (click)="increaseAge()">Age ++</button>
+<div class="box" (scroll)="onScroll($event)">
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu tincidunt velit. Curabitur odio neque, porta quis euismod in, gravida vel libero. Fusce convallis malesuada tempor. Quisque lorem turpis, semper eget feugiat a, vehicula ac purus. Nullam in rhoncus libero. Donec mauris tellus, varius eget orci fringilla, molestie sodales urna. Cras eget libero elementum, consequat massa dictum, gravida augue. Suspendisse lacinia molestie sollicitudin. Ut imperdiet vitae orci sed suscipit. Suspendisse suscipit ex ac sollicitudin condimentum. Morbi eget sapien id tortor dapibus mollis.</p>
+</div>
+
+
+<p>Nombre {{person.name}}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
+
 <h1>Propiedades</h1>
 <button [disabled]="btnDisabled">Enviar</button>
-<input type="text" [value]="person.name">
+<input type="text" [value]="person.name" >
 <progress max="100" [value]="person.age"></progress>
 <img width=100 [src]="person.avatar">
 
